@@ -19,5 +19,5 @@ def detail(request, pk):
         'location': product.location,
     })
 
-def writepage(request):
-    return render(request,'write.html')
+def write(request):
+    return render(request,'product_write.html')
