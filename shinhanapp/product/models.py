@@ -8,6 +8,9 @@ class Product(models.Model):
     price = models.IntegerField(verbose_name='가격')
     location = models.CharField(max_length=256, verbose_name='위치')
 
+    def __str__(self):
+        return f"{self.title}: {self.price}원"
+        
     class Meta:
         db_table = 'shinhan_project'
         verbose_name= '상품'

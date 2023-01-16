@@ -1,0 +1,14 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>당당마켓</h1>
+        <ul>
+            {% for product in products %}
+            <li>{{product.title}} {{product.price}}</li>
+            {% endfor %}
+        </ul>
+    </body>
+
+</html>
