@@ -1,12 +1,17 @@
 <html>
     <head>
-
+        <link rel="stylesheet" href="/static/styles.css" />
     </head>
     <body>
-        <h1>당당마켓</h1>
+        <div class="main-title">
+            <div class="overlay">
+                <h1>당당마켓</h1>
+                <span>가장 가까운 중고거래 플랫폼</span>
+            </div>
+        </div>
         <ul>
             {% for product in products %}
-            <li>{{product.title}} {{product.price}}</li>
+            <li>{{product.title}}: {{product.price}}원 ({{product.location}})</li>
             {% endfor %}
         </ul>
     </body>
