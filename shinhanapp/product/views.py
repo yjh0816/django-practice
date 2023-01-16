@@ -18,3 +18,6 @@ def detail(request, pk):
         'price': product.price,
         'location': product.location,
     })
+
+def writepage(request):
+    return render(request,'write.html')

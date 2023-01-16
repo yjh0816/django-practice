@@ -1,3 +1,10 @@
+:root {
+    --red: #d25a4b;
+    --blue: #369de9;
+    --gray: #aaaaaa;
+    --black: #050203;
+}
+
 @font-face {
     font-family: 'KOTRAHOPE';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2') format('woff2');
@@ -55,4 +62,18 @@ body {
 
 .modal-body img {
     width: 100%;
+}
+
+.product-write {
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.product-btn{
+    float: right;
+}
+
+.btn-primary{
+    background-color: var(--red);
 }
