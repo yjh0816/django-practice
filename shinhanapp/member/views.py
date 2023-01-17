@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.hashers import check_password
+from django.contrib.auth.hashers import check_password, make_password
 from .models import Member
 # from django.http.response import HttpResponse
 
@@ -27,16 +27,24 @@ def logout(request):
         del(request.session['user_id'])
 
     return redirect('/')
-# def regist(request):
-#     if request.method == 'POST':
-#         member = Member(
-#             user_id = request.POST.get("user_id"),
-#             password = request.POST.get("password"),
-#         )
-#         member.save()
-#         return redirect('/') 
+def register(request):
+    if request.method == 'POST':
+        password = request.POST.get("password")
+        user_id = request.POST.get("user_id")
+        name = request.POST.get("name")
+        age = request.POST.get("age")
+       
+        if not Member.objects.filter(user_id=user_id).exists():
+            member = Member(
+                user_id = user_id,
+                password = make_password(password),
+                name = name,
+                age = age
+            )
+            member.save()
+            return redirect('/member/login/') 
 
-#     return render(request,'/')
+    return render(request,'register.html')
 '''
 def main(request):
     # return HttpResponse("Hello!")
