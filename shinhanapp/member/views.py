@@ -23,7 +23,13 @@ def login(request):
         # print("login failed")
     return render(request,'login.html')
 
+def logout(request):
+    if 'user_pk' in request.session:
+        del(request.session['user_pk'] )
+    if 'user_id' in request.session:
+        del(request.session['user_id'])
 
+    return redirect('/')
 # def regist(request):
 #     if request.method == 'POST':
 #         member = Member(

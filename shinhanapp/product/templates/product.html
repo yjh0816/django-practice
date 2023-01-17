@@ -16,6 +16,13 @@
             </div>
         </div>
         <div class="product-content">
+            <div class="text-end mt-3">
+                {% if request.session.user_id %}
+                <a role="button" href="/member/logout/" class="btn btn-secondary">로그아웃</a>
+                {% else %}
+                <a role="button" href="/member/login/" class="btn btn-secondary">로그인</a>
+                {% endif %}
+            </div>
             <div class="list-group list-group-flush">
                 {% for product in products %}                
                 <button 
@@ -42,8 +49,9 @@
                 {% endfor %}
             </div>
             <div class="text-end mt-3">
-                <a role="button" href="/member/login/" class="btn btn-secondary">로그인</a>
+                {% if request.session.user_id %}
                 <a role="button" href="/product/write/" class="btn btn-primary">상품 등록</a>
+                {% endif %}
             </div>
         </div>
    

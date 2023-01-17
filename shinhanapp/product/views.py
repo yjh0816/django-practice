@@ -40,6 +40,8 @@ def detail(request, pk):
 
 def write(request):
     # print(request.method) # reload시 'GET' 출력
+    if not request.session.get('user_id'):
+        return redirect('/member/login/')
     if request.method == 'POST':
         # print(request.POST) # 입력한 내용을 dict로 반환
         product = Product(
