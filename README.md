@@ -3,7 +3,7 @@ This is django practice that called Dangdang market with ShinhanInvestment. Dang
 
 ## Installation
 ```shell
-$ pip install
+$ pip install django
 ```
 ## How to start
 ```shell
