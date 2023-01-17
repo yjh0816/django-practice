@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth.hashers import check_password
 from .models import Member
 # from django.http.response import HttpResponse
 
@@ -8,19 +9,15 @@ def login(request):
         print(request.session)
         user_id = request.POST.get("user_id")
         password = request.POST.get("password")
-        # member = Member.objects.get(user_id=user_id,password=password)
-        # print(member)
+
         if Member.objects.filter(user_id=user_id).exists():
             member = Member.objects.get(user_id=user_id)
 
-            if member.password == password:
-                # print(f"login success{member}")
-
+            if check_password(password, member.password):
                 request.session['user_pk'] = member.id
                 request.session['user_id'] = member.user_id
                 return redirect('/')
 
-        # print("login failed")
     return render(request,'login.html')
 
 def logout(request):
