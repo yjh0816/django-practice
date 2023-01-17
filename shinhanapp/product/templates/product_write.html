@@ -32,8 +32,9 @@
         </div>
         <div class="product-content">
             <div class="product-write">
-                <form enctype="multipart/form-data" method="post" action="/write" id="write-form">
-                    <div class="form-group">
+                <form enctype="multipart/form-data" method="post" action="/product/write/" id="write-form">
+                    {% csrf_token %}
+                    <div class="form-group mb-3">
                         <label for="title">제목</label>
                         <input type="text" class="form-control" id="title" name="title">
                     </div>
