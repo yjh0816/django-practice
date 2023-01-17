@@ -15,5 +15,5 @@ $ python manage.py runserver
 - Show product details
 - Write new product
 
-## Rferences
+## References
 1. [FastCampus Lecture Github](https://github.com/Alghost/2023-shinhan)
