@@ -16,4 +16,4 @@ $ python manage.py runserver
 - Write new product
 
 ## Rferences
-1. [FastCampis](https://github.com/Alghost/2023-shinhan~)
+1. [FastCampus](https://github.com/Alghost/2023-shinhan~)
