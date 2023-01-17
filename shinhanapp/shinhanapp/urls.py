@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 
 from product.views import main, detail, write
+from member.views import login
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -26,6 +27,7 @@ urlpatterns = [
     path('product/<int:pk>/', detail),
     path('product/write/', write),
     path('', main),
+    path('member/login/', login),
 ]
 
 # from shinhanapp.settings import MEDIA_ROOT # 이렇게 사용하지 않음

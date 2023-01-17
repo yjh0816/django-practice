@@ -11,7 +11,7 @@
             <div class="overlay">
                 <div>
                     <h1>당당마켓</h1>
-                    <span>가장 가까운 중고거래 플랫폼</span>
+                    <span>가장 가까운 중고거래 플랫폼 {{request.session.user_id}}</span>
                 </div>
             </div>
         </div>
@@ -42,6 +42,7 @@
                 {% endfor %}
             </div>
             <div class="text-end mt-3">
+                <a role="button" href="/member/login/" class="btn btn-secondary">로그인</a>
                 <a role="button" href="/product/write/" class="btn btn-primary">상품 등록</a>
             </div>
         </div>
