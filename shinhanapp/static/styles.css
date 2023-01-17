@@ -65,13 +65,9 @@ body {
 }
 
 .product-write {
-    width: 100%;
+    width: 80%;
     padding: 20px;
     margin: 0 auto;
-}
-
-.product-btn{
-    float: right;
 }
 
 .btn-primary{

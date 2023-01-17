@@ -7,7 +7,9 @@ jQuery(document).ready(function() {
                 $("#detailModalTitle").text(result.title);
                 $("#detailModalLocation").text(result.location);
                 $("#detailModalPrice").text(result.price);
-                $("#detailModalContent").text(result.content);
+                $("#detailModalContent").html(result.content);
+                $("#detailModalImage").attr('src',result.image);
+                // $("#detailModalImage").attr('src'); // 이렇게 쓰면 값을 가져옴
                 $("#detailModal").modal("show");    
         });
     });

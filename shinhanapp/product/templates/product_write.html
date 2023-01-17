@@ -38,7 +38,7 @@
                         <label for="title">제목</label>
                         <input type="text" class="form-control" id="title" name="title">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mb-3">
                         <label for="location">지역</label>
                         <button type="button" class="ml-2 btn btn-sm btn-outline-dark" onclick="sample2_execDaumPostcode()">주소찾기</button>
                         <div id="layer" style="display:none;position:fixed;overflow:hidden;z-index:1;-webkit-overflow-scrolling:touch;">
@@ -46,21 +46,18 @@
                         </div>
                         <input type="text" class="form-control" id="location" name="location">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mb-3">
                         <label for="price">가격</label>
                         <input type="number" class="form-control" id="price" name="price">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mb-3">
                         <label for="content">내용</label>
                         <textarea id="content" rows="3" name="content" style="display:none;"></textarea>
                         <div id="editor"></div>
                     </div>
-                    <div class="form-group">
-                        <label for="image">이미지</label>
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-control" id="image" name="image">
-                            <label class="custom-file-label" for="image">파일 선택</label>
-                        </div>
+                    <div class="form-group mb-3">
+                        <label for="image" class="form-label">이미지</label>
+                        <input class="form-control form-control-sm" id="image" type="file" name="image">
                     </div>
                     <div class="text-right">
                         <a role="button" href="/" class="btn btn-secondary">취소</a>

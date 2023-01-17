@@ -7,9 +7,10 @@ class Product(models.Model):
     content = models.TextField(verbose_name='상품내용')
     price = models.IntegerField(verbose_name='가격')
     location = models.CharField(max_length=256, verbose_name='위치')
+    image = models.FileField(null=True, blank=True, verbose_name='이미지')
 
-    def __str__(self):
-        return f"{self.title}: {self.price}원"
+    # def __str__(self):
+    #     return f"{self.title}: {self.price}원"
         
     class Meta:
         db_table = 'shinhan_project'
