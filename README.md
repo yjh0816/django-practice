@@ -14,6 +14,7 @@ $ python manage.py runserver
 - Show product list
 - Show product details
 - Write new product
+- User Login, Logout, Register
 
 ## References
 1. [FastCampus Lecture Github](https://github.com/Alghost/2023-shinhan)
