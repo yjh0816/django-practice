@@ -32,6 +32,4 @@ urlpatterns = [
     path('member/register/', register),
 ]
 
-# from shinhanapp.settings import MEDIA_ROOT # 이렇게 사용하지 않음
-
 urlpatterns += static("/media/", document_root=settings.MEDIA_ROOT)

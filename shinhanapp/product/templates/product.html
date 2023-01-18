@@ -40,9 +40,9 @@
                         </div>
                         <div class="flex-grow-1 ms-3 text-end">
                             {{ product.title}}<br/> 
+                            <small class="text-muted">{{product.price}}원</small><br/>
                             {{product.location}}<br/>
-                            <small class="text-muted">{{product.price}}원</small>
-                            <!-- {{product.location}} -->
+                            {{product.user.username}}
                         </div>
                       </div>
                 </button>
@@ -77,8 +77,9 @@
                         <h1 class="modal-title fs-5" id="detailModalTitle"></h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body text-end">
-                        <img id="detailModalImage" />
+                    <div class="modal-body">
+                        <div id="detailModalUsername"></div>
+                        <img src="/static/bg.jpg" id="detailModalImage" />
                         <div id="detailModalLocation"></div>
                         <div id="detailModalPrice"></div>
                         <div id="detailModalContent"></div>

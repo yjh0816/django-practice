@@ -9,8 +9,6 @@ class Member(models.Model):
     age = models.IntegerField(verbose_name='나이')
 
     def __str__(self):
-        # self.name + ': ' + str(self.age) + '세'
-        # "%s: %d세"%(self.name, self.age)
         return f"{self.name}: {self.age}세"
 
     class Meta:
